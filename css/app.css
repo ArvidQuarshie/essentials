@@ -12,6 +12,7 @@ body{
     background-color: white;
     max-width: 1200px;
   text-align: center;
+    color:black;
  
 }
 #container{
@@ -41,4 +42,5 @@ body{
     width:100%;
    background-image: url(../resources/landing.jpeg);
     overflow: hidden;
+    text-align: center;
 }
