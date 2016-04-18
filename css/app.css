@@ -9,7 +9,7 @@ body{
 }
 #menu{
     height:10%;
-    background-color: blue;
+    background-color: white;
     max-width: 1200px;
   text-align: center;
  
@@ -18,7 +18,7 @@ body{
     
     height:100%;
     width:100%;
-    background-color: red;
+ 
 }
 .hvr-grow {
     display: inline-block;
@@ -35,4 +35,10 @@ body{
 .hvr-grow:focus,
 .hvr-grow:active {
     transform: scale(1.1);
+}
+.landing{
+    height:80%;
+    width:100%;
+   background-image: url(../resources/landing.jpeg);
+    overflow: hidden;
 }
