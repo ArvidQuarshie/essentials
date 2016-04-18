@@ -37,11 +37,12 @@ body{
 }
 
 .about{
-    height:50%;
+    height:100%;
     width:100%;
-    background-color: orange;
+background-image: url(../resources/lake.jpg); no-repeat center 
     text-align: center;
     color:black;
+    
 }
 .blog{
     height:50%;
@@ -52,7 +53,7 @@ body{
 .contact{
    height:50%;
     width:100%;
-    background-color: white;
+    background-color:gainsboro;
     text-align: center;
     color:black;
 }
