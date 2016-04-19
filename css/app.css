@@ -225,7 +225,7 @@ body{
 .demo-2 .grid figcaption p,
 .demo-3 .grid figcaption h2,
 .demo-3 .grid figcaption p {
-	timing-function: cubic-bezier(0.250, 0.250, 0.115, 1.445);
+timing-function: cubic-bezier(0.250, 0.250, 0.115, 1.445);
 }
 
 .demo-2 .grid a:hover figcaption p,
@@ -234,3 +234,71 @@ body{
 	transition-duration: 0.1s;
 }
 
+.demo-3 body {
+	background: #52be7f;
+}
+
+.demo-3 .grid figcaption h2 {
+	color: #52be7f;
+}
+
+.demo-3 .grid a:hover figcaption h2 {
+	transform: translateY(5px);
+}
+
+@media screen and (max-width: 58em) {
+	.grid a {
+		width: 33.333%;
+	}
+
+	.grid a:nth-child(odd) {
+		margin: 0;
+	}
+
+	.grid a:nth-child(3n-1) {
+		margin: 30px 0 -30px 0;
+	}
+}
+
+@media screen and (max-width: 45em) {
+	.grid {
+		max-width: 500px;
+	}
+
+	.grid a {
+		width: 50%;
+	}
+
+	.grid a:nth-child(3n-1) {
+		margin: 0;
+	}
+
+	.grid a:nth-child(even) {
+		margin: 30px 0 -30px 0;
+	}
+
+
+	.grid figcaption h2 {
+		margin-bottom: 0px;
+		transform: translateY(30px);
+	}
+
+	.grid figcaption p {
+		margin: 0;
+		padding: 0 10px;
+	}
+}
+
+@media screen and (max-width: 27em) {
+	.grid {
+		max-width: 250px;
+	}
+
+	.grid a {
+		width: 100%;
+	}
+
+	.grid a:nth-child(even) {
+		margin: 0;
+	}
+}
