@@ -330,3 +330,12 @@ timing-function: cubic-bezier(0.250, 0.250, 0.115, 1.445);
 	display: block;
 	position: relative;
 }
+
+.grid1 figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	background: #2c3f52;
+	color: #ed4e6e;
+}
