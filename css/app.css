@@ -302,3 +302,31 @@ timing-function: cubic-bezier(0.250, 0.250, 0.115, 1.445);
 		margin: 0;
 	}
 }
+
+.grid1 {
+	padding: 20px 20px 100px 20px;
+	max-width: 1300px;
+	margin: 0 auto;
+	list-style: none;
+	text-align: center;
+}
+
+.grid1 li {
+	display: inline-block;
+	width: 440px;
+	margin: 0;
+	padding: 20px;
+	text-align: left;
+	position: relative;
+}
+
+.grid1 figure {
+	margin: 0;
+	position: relative;
+}
+
+.grid1 figure img {
+	max-width: 100%;
+	display: block;
+	position: relative;
+}
