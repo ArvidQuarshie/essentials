@@ -339,3 +339,32 @@ timing-function: cubic-bezier(0.250, 0.250, 0.115, 1.445);
 	background: #2c3f52;
 	color: #ed4e6e;
 }
+
+.grid1 figcaption h3 {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+
+.grid1 figcaption span:before {
+	content: 'by ';
+}
+
+.grid1 figcaption a {
+	text-align: center;
+	padding: 5px 10px;
+	border-radius: 2px;
+	display: inline-block;
+	background: #ed4e6e;
+	color: #fff;
+}
+
+@media screen and (max-width: 31.5em) {
+	.grid1 {
+		padding: 10px 10px 100px 10px;
+	}
+	.grid1 li {
+		width: 100%;
+		min-width: 300px;
+	}
+}
