@@ -97,11 +97,15 @@
 
 .grid svg path {
 	fill: #fff;
+    transform:translateY(0);
 }
 
 /* Hover effects */
 .grid a:hover figure img {
 	opacity: 1;
+}
+grid a:hover svg path{
+transform:translateY(320px);
 }
 
 .grid a:hover figcaption h2,
@@ -109,6 +113,7 @@
 	-webkit-transform: translateY(0);
 	transform: translateY(0);
 }
+
 
 .grid a:hover figcaption p {
 	opacity: 0;

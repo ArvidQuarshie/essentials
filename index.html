@@ -22,8 +22,6 @@
     
 <link rel="stylesheet" type="text/css" href="css/ShapeHoverEffectSVG/css/demo.css" />
     <link rel="stylesheet" type="text/css" href="css/ShapeHoverEffectSVG/css/normalize.css" />
-    
-    
 
 
 
@@ -64,58 +62,63 @@
                 </h3>
 
                 </div>
-        <div class="members">
-             <h1>Members</h1>   
-           
-          <section id="grid" class="grid clearfix">
+        <div class="members ">
+            <section id="grid" class="grid clearfix">
 	<a href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
 		<figure>
-			<img src="resources/member3.jpg" />
-			
-			<figcaption>
-				<h2>Senior Developer</h2>
-				<p>Francis is our head developer in the area.</p>
-				
-			</figcaption>
-		</figure>
-	</a>
-              <a href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
-		<figure>
 			<img src="resources/member1.jpg" />
-			
+			<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,218 0,0 180,0 z"/></svg>
 			<figcaption>
-				<h2>Junior Developer</h2>
-				<p>Junior is our assistant developer in the area.</p>
-				
-			</figcaption>
-		</figure>
-	</a>
-              <a href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
-		<figure>
-			<img src="resources/member2.jpg" />
-		
-			<figcaption>
-				<h2>Junior Developer</h2>
-				<p>Joe is our resident hacker.</p>
-				
+				<h2>Crystalline</h2>
+				<p>Soko radicchio bunya nuts gram dulse.</p>
+				<button>View</button>
 			</figcaption>
 		</figure>
 	</a>
 	<!-- ... -->
 </section>
-            </div>
-       
-        <div class ="contact">
-            <h1>Contact Us</h1>
-        <form>
-           <label>Email</label> <input type="text" name="emailaddress" placeholder="emailaddress">
-            <label>Name</label><input type="text" name="name" placeholder="yourname">
             
-            <label>Your Message</label><input type="text" name="message" placeholder="Enter Message">
-            <a href="" class="button button--winona " size="20px">Submit</a>
-            </form>
-        
-            </div>
+        </div>
+
+			<div id="contact">
+
+               </div>
+
+
+
+
+
+        <div class ="portfolio">
+
+        </div>
+<script>
+			(function() {
+
+				function init() {
+					var speed = 250,
+						easing = mina.easeinout;
+
+					[].slice.call ( document.querySelectorAll( '#grid > a' ) ).forEach( function( el ) {
+						var s = Snap( el.querySelector( 'svg' ) ), path = s.select( 'path' ),
+							pathConfig = {
+								from : path.attr( 'd' ),
+								to : el.getAttribute( 'data-path-hover' )
+							};
+
+						el.addEventListener( 'mouseenter', function() {
+							path.animate( { 'path' : pathConfig.to }, speed, easing );
+						} );
+
+						el.addEventListener( 'mouseleave', function() {
+							path.animate( { 'path' : pathConfig.from }, speed, easing );
+						} );
+					} );
+				}
+
+				init();
+
+			})();
+        </script>
 
     </div>
 
