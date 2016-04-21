@@ -22,8 +22,12 @@
     
 <link rel="stylesheet" type="text/css" href="css/ShapeHoverEffectSVG/css/demo.css" />
     <link rel="stylesheet" type="text/css" href="css/ShapeHoverEffectSVG/css/normalize.css" />
- <link rel="stylesheet" href="css/app.css">
+     <link rel="stylesheet" type="text/css" href="css/app.css">
 
+
+
+
+k,
 
 </head>
 
@@ -44,7 +48,7 @@
         </div>
         <div id="menu">
 
-            <h3><a href="#" class="hvr-grow">Home</a>|
+            <h3><a href="#" class="hvr-icon-sink">Home</a>|
               <a href="#" class="hvr-grow">About</a>|
               <a href="#" class="hvr-grow">members</a>|
               <a href="#" class="hvr-grow">Portfolio</a>|
@@ -54,16 +58,18 @@
 
         </div>
         <div class="landing">
-            
+
         </div>
         <div class="about ">
-            <h1> About</h1>
-                <h3>  We are a design agency that focusses on development of unique and flambouyant concepts. We transform our clients dreams into realities through world class implementation.
-                </h3>
+            <h1><p align="center"> About</p></h1>
+                <h4>  We are a design agency that focusses on development of unique and flambouyant concepts. We transform our clients dreams into realities through world class implementation.
+                </h4><br>
+
+            <h4> We specialise in anything digital.</h4>
 
                 </div>
         <div class="members ">
-            <section id="grid" class="grid clearfix">
+            <section id="grid1" class="grid clearfix">
 	<a href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
 		<figure>
 			<img src="resources/member1.jpg" />
@@ -107,7 +113,8 @@
 
 
         <div class ="portfolio">
-            <ul class="grid cs-style-1">
+            <h1>Portfolio</h1>
+            <ul class="grid1 cs-style-1">
 	<li>
 		<figure>
 			<img src="resources/member3.jpg" alt="img01">
@@ -155,7 +162,69 @@
 
 			})();
         </script>
+        		<script src="js/toucheffects.js"></script>
 
+
+    <div class="contact">
+
+      <section class="content bgcolor-1">
+				<h2 class="nomargin-bottom">Haruki</h2>
+				<span class="input input--haruki">
+					<input class="input__field input__field--haruki" type="text" id="input-1" />
+					<label class="input__label input__label--haruki" for="input-1">
+						<span class="input__label-content input__label-content--haruki">First Name</span>
+					</label>
+				</span>
+				<span class="input input--haruki">
+					<input class="input__field input__field--haruki" type="text" id="input-2" />
+					<label class="input__label input__label--haruki" for="input-2">
+						<span class="input__label-content input__label-content--haruki">Last Name</span>
+					</label>
+				</span>
+				<span class="input input--haruki">
+					<input class="input__field input__field--haruki" type="text" id="input-3" />
+					<label class="input__label input__label--haruki" for="input-3">
+						<span class="input__label-content input__label-content--haruki">Email</span>
+					</label>
+				</span>
+			</section>
+        <script src="js/classie.js"></script>
+		<script>
+			(function() {
+				// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+				if (!String.prototype.trim) {
+					(function() {
+						// Make sure we trim BOM and NBSP
+						var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+						String.prototype.trim = function() {
+							return this.replace(rtrim, '');
+						};
+					})();
+				}
+
+				[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+					// in case the input is already filled..
+					if( inputEl.value.trim() !== '' ) {
+						classie.add( inputEl.parentNode, 'input--filled' );
+					}
+
+					// events:
+					inputEl.addEventListener( 'focus', onInputFocus );
+					inputEl.addEventListener( 'blur', onInputBlur );
+				} );
+
+				function onInputFocus( ev ) {
+					classie.add( ev.target.parentNode, 'input--filled' );
+				}
+
+				function onInputBlur( ev ) {
+					if( ev.target.value.trim() === '' ) {
+						classie.remove( ev.target.parentNode, 'input--filled' );
+					}
+				}
+			})();
+		</script>
+      </div>
     </div>
 
 </body>
